@@ -34,3 +34,11 @@ yarn add node-sass@npm:dart-sass
 在访问文件时，直接写到根目录的文件名称。比如 src/index/index.tsx 文件
 -   vue `@/index/index.tsx`
 -   react `index/index.tsx`
+
+## styled-compoents
+虽然上面介绍了scss的配置，但本项目采用 styled-compoents。比sass更香的一种写法。
+```bash
+# 安装
+yarn add styled-components
+yarn add --dev @types/styled-components
+```
