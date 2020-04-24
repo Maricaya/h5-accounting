@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es5", // Typescript翻译为es5
+    "baseUrl": "src", // 项目根目录为src
+    "target": "es5", // ts翻译为es5
     "lib": [
       "dom",
       "dom.iterable",

@@ -18,4 +18,19 @@ yarn start
 ```
 ## css normalize
 -   index.css 上添加 `@import-normalize;` 即可
--   作用：保证页面在不同浏览器上默认样式相近
+-   作用：保证页面在不同浏览器上默认样式相近。（css reset:将默认样式重写）
+-   编辑器会报错，不用管
+
+## 支持scss
+安装dart-scss
+```bash
+# node-sass 下载速度慢、本地编译慢，所以改用dart-sass
+# 在本地下载dart-sass, 以node-sass命名
+yarn add node-sass@npm:dart-sass
+```
+
+## 资源根目录 src 的表示方法
+在 `tsconfig.json` 中配置根目录 `"baseUrl": "src"`。
+在访问文件时，直接写到根目录的文件名称。比如 src/index/index.tsx 文件
+-   vue `@/index/index.tsx`
+-   react `index/index.tsx`
