@@ -5,6 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
+  // react.strctMode 用来纠正代码的标签
   <React.StrictMode>
     <App />
   </React.StrictMode>,
