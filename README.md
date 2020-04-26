@@ -35,10 +35,17 @@ yarn add node-sass@npm:dart-sass
 -   vue `@/index/index.tsx`
 -   react `index/index.tsx`
 
-## styled-compoents
+## styled-components
 虽然上面介绍了scss的配置，但本项目采用 styled-compoents。比sass更香的一种写法。
 ```bash
 # 安装
 yarn add styled-components
 yarn add --dev @types/styled-components
+```
+
+## 安装react-router-dom
+```bash
+yarn add react-router-dom
+# ts依赖
+yarn add --dev @types/react-router-dom
 ```
