@@ -1,5 +1,5 @@
 @import-normalize;
-
+@import "helper";
 * {
   margin: 0; padding: 0;
   box-sizing: border-box;
@@ -10,3 +10,9 @@ ul,ol {
   list-style: none;
 }
 a {text-decoration: none; color: inherit;}
+
+body {
+  font-family: $font-hei;
+  font-size: 16px;
+  line-height: 1.2;
+}
