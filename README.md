@@ -49,3 +49,9 @@ yarn add react-router-dom
 # ts依赖
 yarn add --dev @types/react-router-dom
 ```
+
+## 显示config配置文件
+```bash
+# 不能撤销
+yarn eject
+```
