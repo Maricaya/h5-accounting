@@ -50,8 +50,95 @@ yarn add react-router-dom
 yarn add --dev @types/react-router-dom
 ```
 
-## 显示config配置文件
+# Icon 组件
+## 用 svg-sprite-loader 实现自己的Icon组件
+从设计图中切出 svg 文件，但是我不想每次引入icon的时候都写一大堆:
+```html
+   <img src="xxxxxx/icons/chart.svg" alt="" />
+```
+而且使用这种方式想修改图标的颜色或者大小，只能修改 svg 源文件，或者让 UI 小姐姐重新切图，非常麻烦。
+
+最好能实现类似 element-ui 的引入效果：
+```html
+<Icon name="icon-file-name" />
+```
+下面一起来看看是如何实现的吧！
+
+# 工作原理
+```html
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position: absolute; width: 0; height: 0" aria-hidden="true" id="__SVG_SPRITE_NODE__">
+    <symbol xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 1024 1024" id="money">
+    </symbol>
+</svg>
+```
+这个时候就可以使用 svg-use 啦。
+但是这种方式还是有很多重复代码，能不能实现进一步的封装呢？最好是这种形式 `<Icon name="money"/>`
+
+```html
+<svg fill="red" class="icon">
+  <use xlink:href="#money"/>
+</svg>
+```
+
+下面来看看实现方法吧！
+
+安装 svg-sprite-loader
 ```bash
+# 显示config配置文件
 # 不能撤销
 yarn eject
+yarn add --dev svg-sprite-loader
+yarn add --dev svgo-loader
 ```
+配置webpack.config.js
+```
+{
+  test: /\.svg$/,
+  use: [
+    { loader: 'svg-sprite-loader', options: {} },
+    { loader: 'svgo-loader', options: {} }
+  ]
+}
+```
+这样引入项目中的 svg 文件会经过 svgo-loader => svg-sprite-loader 的处理。在页面中生成 svg-symbols
+
+
+## 组件化
+icon.tsx
+```tsx
+import React from 'react'
+// TreeShaking 不适用于 require
+require('icons/money.svg')
+require('icons/tag.svg')
+require('icons/chart.svg')
+
+type Props = {
+  name: String
+}
+
+const Icon = (props: Props) => {
+  return (
+    <svg className="icon">
+      <use xlinkHref={'#' + props.name} />
+    </svg>
+  )
+}
+
+export default Icon;
+```
+
+## 不想一直重复引入，需要 require 一个目录
+
+在 icon.tsx 文件中引入 svg 需要一个一个引入
+`
+require('icons/money.svg')
+// require('icons/tag.svg')
+// require('icons/chart.svg')
+`
+// 不想一直重复引入，需要 require 一个目录
+
+`let importAll = (requireContext: __WebpackModuleApi.RequireContext) => requireContext
+ try {importAll(require.context('icons', true, /\.svg$/));} catch(e){}
+`
+webpack-env 支持ts
+`yarn add --dev @types/webpack-env`
