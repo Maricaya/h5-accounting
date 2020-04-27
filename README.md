@@ -103,7 +103,7 @@ yarn add --dev svgo-loader
 这样引入项目中的 svg 文件会经过 svgo-loader => svg-sprite-loader 的处理。在页面中生成 svg-symbols
 
 
-## 组件化
+## Icon 组件化
 icon.tsx
 ```tsx
 import React from 'react'
@@ -142,3 +142,5 @@ require('icons/money.svg')
 `
 webpack-env 支持ts
 `yarn add --dev @types/webpack-env`
+
+## Layout 组件化
