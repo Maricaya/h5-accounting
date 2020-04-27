@@ -6,8 +6,8 @@ import React from 'react';
 // require('icons/chart.svg')
 
 // 不想一直重复引入，需要 require 一个目录
-let importAll = (requireContext: __WebpackModuleApi.RequireContext) => requireContext
-try {importAll(require.context('icons', true, /\.svg$/));} catch(e){}
+let importAll = (requireContext: __WebpackModuleApi.RequireContext) => requireContext.keys().forEach(requireContext);
+try {importAll(require.context('icons', true, /\.svg$/));} catch (error) {console.log(error);}
 
 type Props = {
   name: String
