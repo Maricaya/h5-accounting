@@ -143,4 +143,5 @@ require('icons/money.svg')
 webpack-env 支持ts
 `yarn add --dev @types/webpack-env`
 
-## Layout 组件化
+## 事不过三优化思路
+Layout 组件化 & 创建 Views 目录
