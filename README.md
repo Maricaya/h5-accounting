@@ -104,7 +104,7 @@ yarn add --dev svgo-loader
 
 
 ## Icon 组件化
-icon.tsx
+Icon.tsx
 ```tsx
 import React from 'react'
 // TreeShaking 不适用于 require
@@ -129,7 +129,7 @@ export default Icon;
 
 ## 不想一直重复引入，需要 require 一个目录
 
-在 icon.tsx 文件中引入 svg 需要一个一个引入
+在 Icon.tsx 文件中引入 svg 需要一个一个引入
 `
 require('icons/money.svg')
 // require('icons/tag.svg')
