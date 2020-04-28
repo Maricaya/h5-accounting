@@ -145,3 +145,6 @@ webpack-env 支持ts
 
 ## 事不过三优化思路
 Layout 组件化 & 创建 Views 目录
+
+# 封装一个函数组件
+将 Styled Component 改造为 Function Component 
