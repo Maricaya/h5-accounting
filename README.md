@@ -1,3 +1,4 @@
+
 # 项目介绍
 使用 React + Typescript 构建的记账h5，暂使用 LocalStorage 作为本地数据库，后期会改为 node。
 
@@ -36,7 +37,7 @@ yarn add node-sass@npm:dart-sass
 -   react `index/index.tsx`
 
 ## styled-components
-虽然上面介绍了scss的配置，但本项目采用 styled-compoents。比sass更香的一种写法。
+虽然上面介绍了scss的配置，但本项目采用 styled-components。比sass更香的一种写法。
 ```bash
 # 安装
 yarn add styled-components
@@ -54,7 +55,7 @@ yarn add --dev @types/react-router-dom
 ## 用 svg-sprite-loader 实现自己的Icon组件
 从设计图中切出 svg 文件，但是我不想每次引入icon的时候都写一大堆:
 ```html
-   <img src="xxxxxx/icons/chart.svg" alt="" />
+   <img src="icons/chart.svg" alt="" />
 ```
 而且使用这种方式想修改图标的颜色或者大小，只能修改 svg 源文件，或者让 UI 小姐姐重新切图，非常麻烦。
 
@@ -148,3 +149,5 @@ Layout 组件化 & 创建 Views 目录
 
 # 封装一个函数组件
 将 Styled Component 改造为 Function Component 
+
+# 父子组件传值
