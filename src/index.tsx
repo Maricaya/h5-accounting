@@ -6,9 +6,7 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   // React.StrictMode 用来纠正代码的标签
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <App />,
   document.getElementById('root')
 );
 
