@@ -35,7 +35,8 @@ const CategorySection: React.FC = (props) => {
       <ul>
         {categoryList.map(c =>
           <li className={category === c ? 'selected' : ''}
-              onClick={() => {setCategory(c)}}>
+              onClick={() => {setCategory(c)}}
+              key={c}>
             {categoryMap[c]}
           </li>
         )}
