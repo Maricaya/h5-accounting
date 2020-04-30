@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import React, {useState} from 'react';
+import React from 'react';
+import {useTags} from '../../useTags';
 
 const Wrapper = styled.section`
   background: #fff;
@@ -43,7 +44,7 @@ const TagsSection: React.FC<Props> = (props) => {
   // 优点: 参数为空时, ts可以判断出参数的类型
   // useState<string[]>([])
   // tags.map(tag => ... ) ts可以判断出tag是 String，而不是 Number 等等
-  const [tags, setTags] = useState<string[]>(['衣','食','住','行'])
+  const {tags, setTags} = useTags()
   // const [setSelectedTags] = useState<string[]>([])
   const selectedTags = props.value;
   const onAddTag = () => {
