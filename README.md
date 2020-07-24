@@ -15,19 +15,5 @@
 -   vue `@/index/index.tsx`
 -   react `index/index.tsx`
 
-## 安装react-router-dom
-```bash
-yarn add react-router-dom
-# ts依赖
-yarn add --dev @types/react-router-dom
-```
-
 ## Icon 优化
-
-## 事不过三优化思路
-Layout 组件化 & 创建 Views 目录
-
-# 封装一个函数组件
-将 Styled Component 改造为 Function Component 
-
-# 父子组件传值
+[使用 svg-sprite-loader、svgo-loader 优化项目中的 Icon](https://juejin.im/post/5f184a7bf265da22de3e0749)
