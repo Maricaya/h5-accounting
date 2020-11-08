@@ -10,7 +10,10 @@
 
 # 项目搭建
 [使用 webpack4.0 从零搭建 React + TypeScript 应用](https://juejin.im/post/6850418115189309447)
-[Create React App 中配置 CSS (css normalize、scss、styled-components) 的正确姿势](https://juejin.im/post/5f10464be51d451dde2e60f5)
+
+[Create React App 中配置 CSS (css normalize、scss、styled-components) 的正确姿势]
+(https://juejin.im/post/5f10464be51d451dde2e60f5)
+
 [使用 svg-sprite-loader、svgo-loader 优化项目中的 Icon](https://juejin.im/post/5f184a7bf265da22de3e0749)
 
 ## 资源根目录 src 的表示方法
